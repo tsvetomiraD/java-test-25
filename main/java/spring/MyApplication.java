@@ -7,19 +7,25 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyApplication {
     @Autowired
-    @Qualifier("AClass")
-    public AI classA;
+    public A classA;
 
     @Autowired
-    @Qualifier("BClass")
-    public AI classB;
+    public B classB;
+    @Autowired
+    public C classC;
+
+    @Autowired
+    @Qualifier("DClass")
+    public DI classD;
+
+    @Autowired
+    @Qualifier("EClass")
+    public DI classE;
 
     public String processA(String msg){
-        //some magic like validation, logging etc
         return this.classA.msg(msg);
     }
     public String processB(String msg){
-        //some magic like validation, logging etc
         return this.classB.msg(msg);
     }
 
