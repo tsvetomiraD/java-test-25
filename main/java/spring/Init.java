@@ -10,15 +10,29 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(value={"spring"})
 public class Init {
     @Bean
-    @Qualifier("AClass")
-    public AI getA(){
+    public A getA(){
         return new A();
     }
 
     @Bean
-    @Qualifier("BClass")
-    public AI getB(){
+    public B getB(){
         return new B();
     }
 
+    @Bean
+    public C getC(){
+        return new C();
+    }
+
+    @Bean
+    @Qualifier("DClass")
+    public DI getD(){
+        return new D();
+    }
+
+    @Bean
+    @Qualifier("EClass")
+    public DI getE(){
+        return new E();
+    }
 }
